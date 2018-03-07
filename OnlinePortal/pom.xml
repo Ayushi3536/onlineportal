@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -8,79 +9,74 @@
 	<name>OnlinePortal Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
+		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
+
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+		
+		<!-- Link backend project -->
+
+
+		<!-- JAVA EE -->
 		<dependency>
-			<groupId>net.ays</groupId>
-			<artifactId>backendProject</artifactId>
-			<version>0.0.1-SNAPSHOT</version>	
-		</dependency>
-		<dependency>
-			<!-- JAVAEE API DEPENDENCY -->
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
+			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- SPRING WEB MVC DEPENDENCY -->
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-                                  
-                                 
-                                  
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-context</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-context-support</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-core</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-expression</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-instrument-tomcat</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-web</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                  <dependency>
-                                    <groupId>org.springframework</groupId>
-                                    <artifactId>spring-webmvc</artifactId>
-                                    <version>4.0.4.RELEASE</version>
-                                  </dependency>
-                                 
-		<!-- JSTL -->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<!-- JUNIT DEPENDENCY -->
+
+		<!-- JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- SPRING -->
+
+
+
+
+		<!-- JSTL -->
+
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

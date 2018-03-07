@@ -9,16 +9,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import net.ays.backendProject.dao.CategoryDAO;
-import net.ays.backendProject.dto.Category;
+//import ten.ays.backendProject.dao.CategoryDAO;
+//import ten.ays.backendProject.dto.Category;
 
 
 
 @Controller   /*This controller will have all the request mapping */
 public class PageContoller {
 	
-	@Autowired /*It will take care of creating instance of CategoryDAO*/
- 	private CategoryDAO categoryDAO;
+    //@Autowired /*It will take care of creating instance of CategoryDAO*/
+ 	//private CategoryDAO categoryDAO;
 	
 	/*HandlerMapper*/
 	@RequestMapping(value={"/","/home","/index"})
@@ -27,7 +27,7 @@ public class PageContoller {
 		ModelAndView mv = new ModelAndView("page");/*page is the logical name of view ,it will use page .jsp file inside WEB-INF/views/ folder ,we will resolve the name using Internal Resource View Resolver here by adding configuration in spring bean configuration file(dispatcher-servlet.xml)*/
 		
 		mv.addObject("title","Make your Home beautiful");	
-		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("categories",null);//categoryDAO.list());
 		mv.addObject("LoadHome",true);
 		
 		return mv;
@@ -69,22 +69,22 @@ public class PageContoller {
 		ModelAndView mv = new ModelAndView("page");/*page is the logical name of view ,it will use page .jsp file inside WEB-INF/views/ folder ,we will resolve the name using Internal Resource View Resolver here by adding configuration in spring bean configuration file(dispatcher-servlet.xml)*/
 		
 		mv.addObject("title","Allproducts ");	
-		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("categories",null);//categoryDAO.list());
 		mv.addObject("LoadAllProducts",true);
 		
 		return mv;
 	}
 	@RequestMapping(value={"/show/category/{id}/products"})
-	public ModelAndView showCategoryProducts(@PathVariable("id") String id)
+	public ModelAndView showCategoryProducts(@PathVariable("id") int id)
 	{
 		ModelAndView mv = new ModelAndView("page");/*page is the logical name of view ,it will use page .jsp file inside WEB-INF/views/ folder ,we will resolve the name using Internal Resource View Resolver here by adding configuration in spring bean configuration file(dispatcher-servlet.xml)*/
 		
 		//categoryDAO to fetch a single category
-		Category category = null;
-     	category=categoryDAO.get(id);
-		mv.addObject("title",category.getName());	
-		mv.addObject("categories",categoryDAO.list());
-		mv.addObject("category",category);
+		//Category category = null;
+     	//category=categoryDAO.get(id);
+		//mv.addObject("title",category.getName());	
+		mv.addObject("categories",null);//categoryDAO.list());
+		//mv.addObject("category",category);
 		
 		mv.addObject("LoadclickProducts",true);
 		
