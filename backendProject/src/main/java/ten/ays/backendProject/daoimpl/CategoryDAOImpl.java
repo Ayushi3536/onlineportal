@@ -20,6 +20,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	
 	private static List<Category> categories = new ArrayList<>();
 	
 	@Override
@@ -29,7 +30,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	
 		Query query= sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("active",true);
-		return query.getResultList();
+		return null;//query.getResultList();
 		
 	
 	}
@@ -37,12 +38,12 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public Category get(int id) {
 
-		/*	for(Category category :categories)
+			for(Category category :categories)
 			{
 				if(category.getId() == (id))
 					return category;
 			}
-			return null;*/
+			
 		return sessionFactory.getCurrentSession().get(Category.class,Integer.valueOf(id));
 		}
 	@Override

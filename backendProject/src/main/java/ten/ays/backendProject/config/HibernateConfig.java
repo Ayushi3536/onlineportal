@@ -12,8 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver;
-//import org.springframework.transaction
+
 /*@Configuaration annotation tells that we are doing some configuration and spring framwork will take care of its beann
 @ComponentScan tells where entity classes reside which hibernate requires
 @EnableTransactionManagement manages transaction*/

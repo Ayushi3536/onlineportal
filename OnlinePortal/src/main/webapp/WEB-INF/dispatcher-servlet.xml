@@ -17,10 +17,12 @@
    <!-- Context helps frontController(DispatcherServlet added in pom.xml as well as the application to know where other controllers are) -->
    
    
- <context:component-scan base-package="net.ays.onlineportal.controller"/>
- <context:component-scan base-package="ten.ays.backendProject"/>
+ <context:component-scan base-package="net.ays.onlineportal"/>
+ <context:component-scan base-package="net.ays.backendPortal"/>
  
-    <bean id="viewResolver"
+
+ 
+  <bean id="viewResolver"
   class="org.springframework.web.servlet.view.InternalResourceViewResolver">
   <property name="prefix" value="/WEB-INF/views/" />
   <property name="suffix" value=".jsp"/>
