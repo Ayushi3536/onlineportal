@@ -26,9 +26,9 @@
 </script>
 <!-- Bootstrap core CSS 
     <link href="vendor/bootstrap${css}/bootstrap.min.css" rel="stylesheet"> -->
-<link href="${css }/bootstrap.min.css" rel="stylesheet">
-<link href="${css }/dataTables.bootstrap.css" rel="stylesheet">
-<link href="${css }/bootswatchlux.css" rel="stylesheet">
+    <link href="${css }/bootstrap.min.css" rel="stylesheet">
+    <link href="${css }/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${css }/bootswatchlux.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myfile.css" rel="stylesheet">
@@ -73,6 +73,9 @@
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+			<c:if test="${userClickManageProduct == true}">
+				<%@include file="manageProduct.jsp"%>
+			</c:if>
 		</div></div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
@@ -80,10 +83,15 @@
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js }/jquery.min.js"></script>
+		
+		<script src="${js}/jquery.validate.js"></script>
+		
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 		<script src="${js }/bootstrap.bundle.min.js"></script>
 		<script src="${js }/bootstrap.min.js"></script>
 		<script src="${js }/jquery.dataTables.js"></script>
 		<script src="${js }/dataTables.bootstrap.js"></script>
+		<script src="${js }/bootbox.min.js"></script>
 		
 		<script src="${js}/myapp.js"></script>
 

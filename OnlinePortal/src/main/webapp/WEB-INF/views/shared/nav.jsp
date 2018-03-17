@@ -5,11 +5,12 @@
             <a id="about" class="navbar-brand" href="${contextRoot}/about">About</a>
             <a id="listproduct" class="navbar-brand" href="${contextRoot}/show/all/products">Product</a>
           <a id="contact" class="navbar-brand" href="${contextRoot}/contact">Contact</a>
-               
-      <!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <a id="manageProduct" class="navbar-brand" href="${contextRoot}/manage/product">Manage Product</a>
+	                 
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+   <!--     <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="${contextRoot}/home">Home Sweet Home
@@ -25,6 +26,9 @@
             <li class="nav-item">
               <a class="nav-link" href="${contextRoot}/contact">Contact</a>
             </li>
+             <li id="manageProduct">
+	                        <a href="${contextRoot}/manage/product">Manage Product</a>
+	                    </li>	
           </ul>
         </div>-->
       </div>
