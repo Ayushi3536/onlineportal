@@ -64,7 +64,7 @@ public void testDeleteCategory()
 //assertEquals("Successfully deleted a single category from a table",true,categoryDAO.delete(category));
 
 }
-@Test
+//@Test
 public void testListCategory()
 {
 //category = categoryDAO.get(3);	
@@ -75,19 +75,19 @@ public void testListCategory()
 public void testCRUDCategory()
 {
 	category = new Category();
-	category.setName("Laptop");
+	category.setName("Decor");
 	category.setDescription("Thi!");
 	category.setImageURL("CAT_1.png");
-	//assertEquals("Successfully added",true,categoryDAO.add(category));
+     categoryDAO.add(category);
 
 	category = new Category();
-	category.setName("Mobile");
+	category.setName("Furniture");
 	category.setDescription("Thi!");
 	category.setImageURL("CAT_1.png");
-	//assertEquals("Successfully added",true,categoryDAO.add(category));
+	categoryDAO.add(category);
 	//category = categoryDAO.get(3);	
 	category.setName("TV");
-	//assertEquals("Successfully updated a single category from a table",true,categoryDAO.update(category));
+   categoryDAO.update(category);
 	//assertEquals("Successfully deleted a single category from a table",true,categoryDAO.delete(category));
 //	assertEquals("Successfully fetched LIST OF ACTIVE category from a table",2,categoryDAO.list().size());
 
