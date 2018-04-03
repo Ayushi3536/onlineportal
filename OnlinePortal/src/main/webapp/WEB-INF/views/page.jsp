@@ -66,9 +66,40 @@
 				<%@include file="listproduct.jsp"%>
 
 			</c:if>
+<<<<<<< Updated upstream
 		</div></div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
+=======
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			<c:if test="${userClickManageProduct == true}">
+				<%@include file="manageProduct.jsp"%>
+			</c:if>
+			<!-- Load only when user clicks manage product -->
+			<c:if test="${userClickShowCart == true}">
+				<%@include file="cart.jsp"%>
+			</c:if>	
+			
+		</div>
+	</div>
+	<!-- Footer -->
+	<%@include file="./shared/footer.jsp"%>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="${js }/jquery.min.js"></script>
+
+	<script src="${js}/jquery.validate.js"></script>
+
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="${js }/bootstrap.bundle.min.js"></script>
+	<script src="${js }/bootstrap.min.js"></script>
+	<script src="${js }/jquery.dataTables.js"></script>
+	<script src="${js }/dataTables.bootstrap.js"></script>
+	<script src="${js }/bootbox.min.js"></script>
+>>>>>>> Stashed changes
 
 
 		<!-- Bootstrap core JavaScript -->
